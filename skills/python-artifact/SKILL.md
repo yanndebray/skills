@@ -1,5 +1,5 @@
 ---
-name: python-artifacts
+name: python-artifact
 description: >
   Build browser-based Python artifacts using Pyodide (CPython compiled to WebAssembly).
   Use this skill whenever the user wants to run Python code in an artifact or web app,
