@@ -1,3 +1,11 @@
+---
+name: compress-video
+description: >
+  Reduce video file size using ffmpeg with H.264 encoding. Use when the user
+  asks to compress a video, shrink a video file, reduce video size, or make
+  a video smaller. Requires ffmpeg in PATH.
+---
+
 # Compress Video Skill
 
 Reduce video file size using ffmpeg with H.264 encoding.
