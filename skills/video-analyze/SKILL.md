@@ -17,10 +17,10 @@ Primary tool: **`ponty`** — a CLI built on top of Google's Gemini API by [yann
 
    Provides a single executable, `ponty`. Source / issues: https://github.com/yanndebray/merleau
 
-2. **Set the API key** if not already set. The package reads `GOOGLE_API_KEY` via `python-dotenv`, so a `.env` next to the working directory or an exported env var both work.
+2. **Set the API key** if not already set. The package reads `GEMINI_API_KEY` via `python-dotenv`, so a `.env` next to the working directory or an exported env var both work.
 
    ```bash
-   export GOOGLE_API_KEY="..."
+   export GEMINI_API_KEY="..."
    ```
 
 3. **Run.**
@@ -98,7 +98,7 @@ For login-walled or YouTube-bot-blocked URLs, add `--cookies-from-browser firefo
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| `ponty: error: GOOGLE_API_KEY not set` | env var missing | `export GOOGLE_API_KEY=...` or drop into `.env` |
+| `ponty: error: GEMINI_API_KEY not set` | env var missing | `export GEMINI_API_KEY=...` or drop into `.env` |
 | `Sign in to confirm you're not a bot` (yt-dlp fallback only) | YouTube bot wall, esp. on cloud IPs | `--cookies-from-browser firefox`; `ponty` itself doesn't hit this because Gemini fetches server-side |
 | Video over 2h | Exceeds Gemini's context | Pre-trim with `ffmpeg -i in.mp4 -t 7200 -c copy out.mp4` and analyze the segment most likely to contain the answer |
 | Gemini refuses (safety filter) | Triggered on adult / violent content classification | Acknowledge, summarize what you can from metadata + the user's own description |
